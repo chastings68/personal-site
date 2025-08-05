@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>Charles Hastings | Cybersecurity Professional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!--Buttons around pic-->
+    <section class="Marine-Banner">
+        <!--creating class so I can position each button-->
+            <a href="/about" class="btn top-left">About</a>
+            <a href="/resume" class="btn top-right">Resume</a>
+            <a href="#contact" class="btn bottom-left">Contact Me</a>
+            <a href="#projects" class="btn bottom-right">Projects</a>
+        <img src="{{ url_for('static', filename='profilepic.jpg') }}" style="margin-top: 15px;" class='profile-pic'>
+    </section>
+    <footer>
+        <p>© Charles Hastings 2025</p>
+    </footer>
+</body>
+</html>

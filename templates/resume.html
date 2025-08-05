@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charles Hastings | Resume</title>
+    <style>
+        body {
+            background-color: #c9dbf6;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: left;
+            padding: 100px 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+        h1 {
+            margin-left: 20px;
+        }
+        .pdf-frame {
+            width: 90%;
+            max-width: 1000px;
+            height: 90vh;
+            border: 2px solid #30363d;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 12px rgba(0, 255, 128, 0.15);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .back-button {
+            margin-top: 20px;
+            background-color: #238636;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2ea043;
+        }
+        .darkmode {
+            background-color: #204c77;
+            color: #08210c;
+        }
+        .darkmode .back-button {
+            background-color: aliceblue;
+        }
+        .darkmode .back-button:hover {
+            background-color: aqua;
+        }
+        .darkmode .pdf-frame {
+            border-color: #c9d1d9;
+            box-shadow: 0 0 12px rgba(0, 255, 128, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dark Mode Toggle</h2>
+        <button id="toggle-btn"> Toggle Dark Mode</button>
+    </div>
+
+    <h1>My Resume</h1>
+
+    <div class="pdf-frame">
+        <iframe src="{{ url_for('static', filename='Charles Hastings_Resume 3.pdf') }}"></iframe>
+    </div>
+
+    <a class="back-button" href="/">Back to Home</a>
+<script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('darkmode');
+    });
+</script>
+
+</body>
+</html>
