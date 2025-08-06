@@ -15,6 +15,10 @@ def resume():
 def about():
     '''about page'''
     return render_template("about.html")
+@app.route("/contact")
+def contact():
+    '''contact page'''
+    return render_template("contact.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
